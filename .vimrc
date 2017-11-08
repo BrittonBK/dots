@@ -4,9 +4,6 @@ filetype off
 set mouse=a
 set clipboard=unnamed
 
-source ~/.vim/yang.vim
-
-
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
@@ -19,7 +16,8 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'sjl/gundo.vim'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'scrooloose/syntastic'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'w0rp/ale'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'wincent/Command-T'
 Bundle 'Lokaltog/vim-distinguished'
@@ -34,22 +32,23 @@ Bundle 'rust-lang/rust.vim'
 Bundle 'Yggdroot/indentLine'
 Bundle 'mxw/vim-jsx'
 Bundle 'chase/vim-ansible-yaml'
+Bundle 'scrooloose/nerdcommenter'
 
 call vundle#end()
 
 
 filetype plugin indent on
 
-
+let g:ale_sign_column_always = 1
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_go_checkers = ['gometalinter']
-let g:syntastic_javascript_checkers = ['eslint']
+"set statusline+=%{SyntasticStatuslineFlag()}
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_go_checkers = ['gometalinter']
+"let g:syntastic_javascript_checkers = ['eslint']
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
@@ -88,7 +87,6 @@ set softtabstop=4
 set expandtab
 set shiftround
 set formatoptions=tcroql
-set nofoldenable
 set autowriteall
 set noautoread
 set modeline
@@ -158,5 +156,9 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType yml setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
+set spell
+set spelllang=en_us
