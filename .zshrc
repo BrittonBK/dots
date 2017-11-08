@@ -11,4 +11,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-prompt -s agnoster
+
+autoload -Uz promptinit
+promptinit
+prompt agnoster
