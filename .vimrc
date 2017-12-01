@@ -107,6 +107,7 @@ set incsearch
 colorscheme solarized
 
 let NERDTreeQuitOnOpen = 1
+let NERDTreeShowHidden = 0
 map <silent> <C-n> :NERDTreeToggl<CR>
 
 

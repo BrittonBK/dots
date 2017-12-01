@@ -1,0 +1,44 @@
+# reset new bindings
+# unbind-key -a
+
+# split panes using | and -
+# bind | split-window -h
+# bind - split-window -v
+# unbind '"'
+# unbind %
+
+# reload config file 
+# bind r source-file ~/.tmux.config
+
+# switch panes using Alt-arrow (without prefix)
+# bind -n M-Left select-pane -L
+# bind -n M-Right select-pane -R
+# bind -n M-Up select-pane -U
+# bind -n M-Down select-pane -D
+
+# Enable mouse mode
+# set -g mouse on
+
+
+# Here and below are copied from Matt's dots file.
+set -g default-terminal "screen-256color"
+
+set-option -g -q mouse on
+
+# Use vim keybindings in copy mode
+setw -g mode-keys vi
+
+set-window-option -g xterm-keys on
+
+# Fix scrolling
+bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'copy-mode -e'"
+
+# set-option -g default-command "reattach-to-user-namespace -l `echo $SHELL`"
+
+bind-key -T edit-mode-vi Up send-keys -X history-up
+bind-key -T edit-mode-vi Down send-keys -X history-down
+unbind-key -T copy-mode-vi Space     ;   bind-key -T copy-mode-vi v send-keys -X begin-selection
+unbind-key -T copy-mode-vi Enter     ;   bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
+unbind-key -T copy-mode-vi C-v       ;   bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
+unbind-key -T copy-mode-vi [         ;   bind-key -T copy-mode-vi [ send-keys -X begin-selection
+unbind-key -T copy-mode-vi ]         ;   bind-key -T copy-mode-vi ] send-keys -X copy-selection
