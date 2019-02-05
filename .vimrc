@@ -48,10 +48,13 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'tpope/vim-dadbod'
+Bundle 'elzr/vim-json'
 
 call vundle#end()
 
 let g:virtualenv_directory = '.'
+
+let g:vim_json_syntax_conceal = 0
 
 filetype plugin indent on
 
@@ -183,6 +186,8 @@ autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType python setlocal omnifunc=jedi#completions
 autocmd FileType python setlocal colorcolumn=80
 autocmd FileType go setlocal colorcolumn=100
+
+autocmd InsertEnter *.json setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 set spell
 set spelllang=en_us
