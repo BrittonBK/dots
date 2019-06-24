@@ -93,6 +93,7 @@ nmap <leader>p <Plug>yankstack_substitute_older_paste
 nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
 let g:virtualenv_directory = '.'
+let g:ale_virtualenv_dir_names = ['virtualenv']
 
 filetype plugin indent on
 let g:ale_sign_column_always = 1
@@ -106,6 +107,9 @@ let g:ale_linters = {'tsx': ['stylelint', 'tslint']}
 
 set statusline+=%#warningmsg#
 set statusline+=%*
+
+let g:rustfmt_autosave = 1
+let g:rustfmt_command = 'rustup run stable rustfmt'
 
 "set statusline+=%{SyntasticStatuslineFlag()}
 "let g:syntastic_always_populate_loc_list = 1
@@ -129,7 +133,7 @@ set t_Co=256
 set noerrorbells
 set vb t_vb=
 
-autocmd VimEnter * Tagbar
+"autocmd VimEnter * Tagbar
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd FileType crontab setlocal nowritebackup
 
@@ -231,7 +235,7 @@ autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType json setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType python setlocal omnifunc=jedi#completions
-autocmd FileType python setlocal colorcolumn=80
+autocmd FileType python setlocal colorcolumn=88
 autocmd FileType go setlocal colorcolumn=100
 
 set spell
