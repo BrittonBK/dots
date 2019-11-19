@@ -93,7 +93,7 @@ nmap <leader>p <Plug>yankstack_substitute_older_paste
 nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
 let g:virtualenv_directory = '.'
-let g:ale_virtualenv_dir_names = ['virtualenv']
+let g:ale_virtualenv_dir_names = ['virtualenv3', 'virtualenv']
 
 filetype plugin indent on
 let g:ale_sign_column_always = 1
