@@ -21,6 +21,7 @@ pyenv
 reattach-to-user-namespace
 ripgrep
 sqlite
+tig
 tmux
 tree
 vim

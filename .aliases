@@ -1,0 +1,35 @@
+alias dev="cd $HOME/dev"
+alias afk="/System/Library/CoreServices/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine"
+alias vi=vim
+alias update='brew update; brew upgrade; brew cleanup'
+
+alias sshprod='ssh brittonk@192.168.11.228'
+alias sshdemo='ssh brittonk@192.168.11.202'
+alias sshdev='ssh brittonk@192.168.11.203'
+alias sshcsv='ssh brittonk@192.168.11.11'
+
+rebase_master () {
+    git stash
+    git pull --rebase origin master
+    git stash apply
+}
+
+gs () {
+    clear
+    git branch
+    git status
+}
+
+alias gss="tig status"
+
+cw () {
+    cd $HOME/dev/clearwater
+    source virtualenv/bin/activate
+}
+
+cw3 () {
+    cd $HOME/dev/clearwater
+    source virtualenv3/bin/activate
+}
+
+alias tmux_cw="$HOME/dev/dots/scripts/tmux_cw.sh"
