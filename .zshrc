@@ -26,3 +26,11 @@ source $HOME/.aliases
 autoload -Uz promptinit
 promptinit
 prompt agnoster
+export AGNOSTER_PROMPT_SEGMENTS[2]=
+
+# setup pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+export LSCOLORS='ExfxcxdxbxGxDxabagacad'
