@@ -17,5 +17,5 @@ alias gss="tig status"
 alias cw="cd $HOME/dev/bafs/clearwater; source .venv2/bin/activate"
 alias cw3="cd $HOME/dev/bafs/clearwater; source .venv3/bin/activate"
 
-alias tmux_cw="$HOME/dev/dots/scripts/tmux_cw.sh cw"
-alias tmux_cw3="$HOME/dev/dots/scripts/tmux_cw.sh cw3"
+alias tmux_cw="$HOME/dev/dev_setup/scripts/tmux_cw.sh cw"
+alias tmux_cw3="$HOME/dev/dev_setup/scripts/tmux_cw.sh cw3"
