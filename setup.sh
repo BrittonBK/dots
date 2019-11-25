@@ -11,7 +11,7 @@ function initial_dots_setup {
     cd ~/DEV_FOLDER
     git status
     read -n1 -r -p "Press any key to continue once dev tools are installed..." key
-    git clone https://github.com/BrittonBK/dots.git
+    git clone git@github.com:BrittonBK/dots.git
 }
 
 function reqs_and_settings {
