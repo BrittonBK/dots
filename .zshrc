@@ -23,6 +23,9 @@ export EDITOR=vim
 # Load aliases
 source $HOME/.aliases
 
+# Fish-like autocomplete for zsh!
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 autoload -Uz promptinit
 promptinit
 prompt agnoster

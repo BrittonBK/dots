@@ -3,7 +3,8 @@ alias afk="/System/Library/CoreServices/ScreenSaverEngine.app/Contents/MacOS/Scr
 alias vi="vim"
 alias update="brew update; brew upgrade; brew cleanup"
 
-alias sshprod='ssh brittonk@192.168.11.228'
+alias sshnew="ssh -t brittonk@192.168.11.203 'ssh brittonk@192.168.11.152'"
+alias sshprod='ssh brittonk@192.168.11.223'
 alias sshdemo='ssh brittonk@192.168.11.202'
 alias sshdev='ssh brittonk@192.168.11.203'
 alias sshcsv='ssh brittonk@192.168.11.11'
@@ -20,7 +21,9 @@ alias cw3="cd $HOME/dev/bafs/clearwater; source .venv3/bin/activate"
 alias tmux_cw="$HOME/dev/dev_setup/scripts/tmux_cw.sh cw"
 alias tmux_cw3="$HOME/dev/dev_setup/scripts/tmux_cw.sh cw3"
 
-alias bafs_js_reset="cw; cd jscommon; rm -rf dist; rm -rf node_modules; yarn; yarn run build-dev; cd ../render; rm -rf dist; rm -rf node_modules; yarn; yarn run build-dev; cd ..; make jscommon-symlink; cd commotion; rm -rf node_modules; yarn; cd ../revival/static; rm -rf node_modules; yarn; yarn transpile"
+alias black="black -t py38 -l 100"
+
+alias ':q'="exit"
 
 # This doesn't work yet... work on it... and don't break with no params
 wip() {

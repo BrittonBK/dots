@@ -145,7 +145,7 @@ set scrolloff=3
 set backspace=2
 set showmatch
 "set wrap
-set textwidth=80
+set textwidth=100
 set colorcolumn=80
 set linebreak
 set autoindent
@@ -235,7 +235,7 @@ autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType json setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType python setlocal omnifunc=jedi#completions
-autocmd FileType python setlocal colorcolumn=88
+autocmd FileType python setlocal colorcolumn=100
 autocmd FileType go setlocal colorcolumn=100
 
 set spell
